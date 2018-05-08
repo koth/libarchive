@@ -71,6 +71,17 @@ __FBSDID("$FreeBSD: head/lib/libarchive/archive_entry.c 201096 2009-12-28 02:41:
 #include <wchar.h>
 #endif
 
+#ifdef major
+#undef major
+#endif
+#ifdef minor
+#undef minor
+#endif
+
+#ifdef makedev
+#undef makedev
+#endif 
+
 #include "archive.h"
 #include "archive_acl_private.h"
 #include "archive_entry.h"

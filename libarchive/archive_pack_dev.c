@@ -61,6 +61,17 @@ __RCSID("$NetBSD$");
 #include <unistd.h>
 #endif
 
+#ifdef major
+#undef major
+#endif
+#ifdef minor
+#undef minor
+#endif
+
+#ifdef makedev
+#undef makedev
+#endif
+
 #include "archive_pack_dev.h"
 
 static	pack_t	pack_netbsd;
